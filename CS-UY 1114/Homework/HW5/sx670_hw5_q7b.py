@@ -1,0 +1,23 @@
+n=int(input("Enter decimal number:\n"))
+n1=n
+s=""
+if(n1>=1000):
+    s=s+("M"*(n1//1000))
+    n1=n1%1000
+if(n1>=500):
+    s=s+"D"
+    n1-=500
+if(n1>=100):
+    s=s+("C"*(n1//100))
+    n1=n1%100
+if(n1>=50):
+    s=s+"L"
+    n1-=50
+if(n1>=10):
+    s=s+("X"*(n1//10))
+    n1=n1%10
+if(n1>=5):
+    s=s+"V"
+    n1-=5
+s=s+("I"*n1)
+print(n,"is",s)
